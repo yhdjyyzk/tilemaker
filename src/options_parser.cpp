@@ -18,7 +18,7 @@ namespace po = boost::program_options;
 po::options_description getParser(OptionsParser::Options& options) {
 	po::options_description desc("tilemaker " STR(TM_VERSION) "\nConvert OpenStreetMap .pbf files into vector tiles\n\nAvailable options");
 	desc.add_options()
-		("help",                                                                 "show help message")
+		("help",                                                                 "show help message...")
 		("input",  po::value< vector<string> >(&options.inputFiles),                     "source .osm.pbf file")
 		("output", po::value< string >(&options.outputFile),                             "target directory or .mbtiles/.pmtiles file")
 		("bbox",   po::value< string >(&options.bbox),                                   "bounding box to use if input file does not have a bbox header set, example: minlon,minlat,maxlon,maxlat")
