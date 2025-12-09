@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Enable vcpkg cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: c:\vcpkg\installed
         key: windows-vcpkg-x64-0 # Increase the number whenever dependencies are modified
@@ -65,7 +65,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Enable vcpkg cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ${{ matrix.path }}
         key: vcpkg-${{ matrix.triplet }}-0 # Increase the number whenever dependencies are modified
